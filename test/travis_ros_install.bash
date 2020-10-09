@@ -17,7 +17,7 @@ bash ./step1.bash
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
 source /opt/ros/indigo/setup.bash
-catin_init_workspace
-cd ~/catin_ws
+catkin_init_workspace
+cd ~/catkin_ws
 catkin_make
 
