@@ -5,4 +5,5 @@ script:
   - bash -xve ./test/install_ros_kinetic.sh
   - source /opt/ros/kinetic/setup.bash
   - bash -xve ./test/travis_package_make.bash
+  - rostest pimouse_ros test.launch
 
