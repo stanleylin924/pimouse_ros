@@ -3,7 +3,5 @@ dist: xenial
 
 script:
   - bash -xve ./test/install_ros_kinetic.sh
-  - source /opt/ros/indigo/setup.bash
-  - source ~/catkin_ws/devel/setup.bash
   - bash -xve ./test/travis_package_make.bash
 
