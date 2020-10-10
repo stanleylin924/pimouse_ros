@@ -2,6 +2,16 @@
 # Apache License 2.0
 # Copyright (c) 2017, ROBOTIS CO., LTD.
 
+sudo apt-get install -y chrony ntpdate
+sudo ntpdate -q ntp.ubuntu.com
+
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+sudo apt-get update -y
+sudo apt-get install -y ros-kinetic-desktop-full
+
+exit 0
+
 echo ""
 echo "[Note] Target OS version  >>> Ubuntu 16.04.x (xenial) or Linux Mint 18.x"
 echo "[Note] Target ROS version >>> ROS Kinetic Kame"
