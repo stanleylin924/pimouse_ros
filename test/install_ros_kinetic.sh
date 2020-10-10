@@ -2,27 +2,27 @@
 # Apache License 2.0
 # Copyright (c) 2017, ROBOTIS CO., LTD.
 
-sudo ntpdate -q ntp.ubuntu.com
+#sudo ntpdate -q ntp.ubuntu.com
 
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
-sudo apt-get update -y
-sudo apt-get install -y ros-kinetic-desktop-full
-sudo apt-get install ros-kinetic-rqt*
-sudo apt-get install python-rosdep
-sudo rosdep init
-rosdep update
-sudo apt-get install -y python-rosinstall python-rosinstall-generator python-wstool build-essential
-source /opt/ros/kinetic/setup.bash
-echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
-mkdir -p ~/catkin_ws/src
-cd ~/catkin_ws/
-catkin_make
-source ~/catkin_ws/devel/setup.bash
-echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
-printenv | grep ROS
+#sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+#sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+#sudo apt-get update -y
+#sudo apt-get install -y ros-kinetic-desktop-full
+#sudo apt-get install ros-kinetic-rqt*
+#sudo apt-get install python-rosdep
+#sudo rosdep init
+#rosdep update
+#sudo apt-get install -y python-rosinstall python-rosinstall-generator python-wstool build-essential
+#source /opt/ros/kinetic/setup.bash
+#echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+#mkdir -p ~/catkin_ws/src
+#cd ~/catkin_ws/
+#catkin_make
+#source ~/catkin_ws/devel/setup.bash
+#echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+#printenv | grep ROS
 
-exit 0
+#exit 0
 
 echo ""
 echo "[Note] Target OS version  >>> Ubuntu 16.04.x (xenial) or Linux Mint 18.x"
@@ -38,12 +38,12 @@ name_os_version=${name_os_version:="xenial"}
 name_ros_version=${name_ros_version:="kinetic"}
 name_catkin_workspace=${name_catkin_workspace:="catkin_ws"}
 
-echo "[Update the package lists and upgrade them]"
-sudo apt-get update -y
-sudo apt-get upgrade -y
+#echo "[Update the package lists and upgrade them]"
+#sudo apt-get update -y
+#sudo apt-get upgrade -y
 
-echo "[Install build environment, the chrony, ntpdate and set the ntpdate]"
-sudo apt-get install -y chrony ntpdate build-essential
+#echo "[Install build environment, the chrony, ntpdate and set the ntpdate]"
+#sudo apt-get install -y chrony ntpdate build-essential
 sudo ntpdate ntp.ubuntu.com
 
 echo "[Add the ROS repository]"
@@ -103,7 +103,7 @@ sh -c "echo \"source ~/$name_catkin_workspace/devel/setup.bash\" >> ~/.bashrc"
 sh -c "echo \"export ROS_MASTER_URI=http://localhost:11311\" >> ~/.bashrc"
 sh -c "echo \"export ROS_HOSTNAME=localhost\" >> ~/.bashrc"
 
-source $HOME/.bashrc
+#source $HOME/.bashrc
 
 echo "[Complete!!!]"
 exit 0
