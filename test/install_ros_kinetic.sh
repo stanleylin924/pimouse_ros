@@ -2,7 +2,6 @@
 # Apache License 2.0
 # Copyright (c) 2017, ROBOTIS CO., LTD.
 
-sudo apt-get install -y chrony ntpdate
 sudo ntpdate -q ntp.ubuntu.com
 
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
