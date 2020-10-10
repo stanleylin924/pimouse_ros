@@ -15,13 +15,11 @@ rosdep update
 sudo apt-get install -y python-rosinstall python-rosinstall-generator python-wstool build-essential
 source /opt/ros/kinetic/setup.bash
 echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
-source ~/.bashrc
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/
 catkin_make
 source ~/catkin_ws/devel/setup.bash
 echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
-source ~/.bashrc
 printenv | grep ROS
 
 exit 0
